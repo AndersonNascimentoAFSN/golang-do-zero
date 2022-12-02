@@ -34,17 +34,28 @@ func main() {
 	sumTotal := math.SumTotal(1, 2, 3, 4)
 	fmt.Println("sumTotal", sumTotal)
 
-	// função anônima
-	resultado := func(x ...int) func() int {
-		res := 0
+	//// função anônima
+	// resultado := func(x ...int) func() int {
+	// 	res := 0
 
-		for _, v := range x {
-			res += v
-		}
+	// 	for _, v := range x {
+	// 		res += v
+	// 	}
 
-		return func() int {
-			return res * res
-		}
-	}
-	fmt.Println(resultado(1, 2, 3)())
+	// 	return func() int {
+	// 		return res * res
+	// 	}
+	// }
+	// fmt.Println(resultado(1, 2, 3)())
+	car1 := Car{Name: "BMW", Year: 2022}
+	car1.Walk()
+}
+
+type Car struct {
+	Name string
+	Year int
+}
+
+func (c Car) Walk() {
+	fmt.Println(c.Name, "Andou!")
 }
