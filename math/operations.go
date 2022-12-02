@@ -28,3 +28,34 @@ func SumTotal(numbers ...int) (result int) {
 	}
 	return
 }
+
+func Anonymous(x ...int) func() int {
+	res := 0
+
+	for _, v := range x {
+		res += v
+	}
+
+	return func() int {
+		return res * res
+	}
+}
+
+func Operations(x ...int) func(op string) int {
+	res := 0
+	return func(op string) int {
+		if op == "sum" {
+			for _, v := range x {
+				res += v
+			}
+			return res
+		}
+		if op == "multi" {
+			for _, v := range x {
+				res *= v
+			}
+			return res
+		}
+		return 0
+	}
+}
