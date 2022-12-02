@@ -1,16 +1,15 @@
 package crawler
 
 import (
-	"log"
 	"net/http"
 )
 
-func GetUrl(url string) *http.Response {
+func GetUrl(url string) (*http.Response, error) {
 	res, err := http.Get(url)
 
 	if err != nil {
-		log.Fatal(err.Error())
+		return nil, err
 	}
 
-	return res
+	return res, nil
 }
