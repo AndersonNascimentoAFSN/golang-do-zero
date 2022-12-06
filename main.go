@@ -7,6 +7,7 @@ import (
 	"github.com/AndersonNascimentoAFSN/golang-do-zero/crawler"
 	"github.com/AndersonNascimentoAFSN/golang-do-zero/math"
 	"github.com/AndersonNascimentoAFSN/golang-do-zero/ponteiro"
+	"github.com/AndersonNascimentoAFSN/golang-do-zero/structs"
 )
 
 func main() {
@@ -52,6 +53,8 @@ func main() {
 	car1.Walk()
 
 	ponteiro.Point()
+
+	structs.HandleStruct()
 }
 
 type Car struct {
