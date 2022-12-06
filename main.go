@@ -6,6 +6,7 @@ import (
 
 	"github.com/AndersonNascimentoAFSN/golang-do-zero/crawler"
 	"github.com/AndersonNascimentoAFSN/golang-do-zero/math"
+	"github.com/AndersonNascimentoAFSN/golang-do-zero/ponteiro"
 )
 
 func main() {
@@ -49,6 +50,8 @@ func main() {
 	// fmt.Println(resultado(1, 2, 3)())
 	car1 := Car{Name: "BMW", Year: 2022}
 	car1.Walk()
+
+	ponteiro.Point()
 }
 
 type Car struct {
